@@ -22,12 +22,11 @@ dl, dd, ol, ul, figure {
  * Basic styling
  */
 body {
-    font-family: $font-brand3;
-    font-size: $base-font-size;
-    line-height: $base-line-height;
-    font-weight: 300;
-    color: #000 !important;
-    background-color: $brand-color3;
+    font-family: $font-2;
+    // font-size: $base-font-size;
+    // line-height: $base-line-height;
+    font-weight: 400;
+    color: $black;
     -webkit-text-size-adjust: 100%;
 }
 
@@ -40,11 +39,13 @@ h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure,
 %vertical-rhythm {
-    margin-bottom: $spacing-unit / 2;
+    margin-bottom: 15px;
 }
 
 ul, li {
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 /**
@@ -54,33 +55,6 @@ img {
     max-width: 100%;
     vertical-align: middle;
 }
-
-
-/**
- * Links
- */
-a {
-    color: $text-color;
-    text-decoration: none;
-
-    &:visited {
-        color: darken($text-color, 15%);
-    }
-
-    &:hover {
-        color: $text-color;
-        border-bottom: 1px solid;
-        // padding-bottom: 2px;
-    }
-}
-a.no-line {
-    &:hover {
-        border-bottom: 0;
-    }
-}
-
-.section-link:hover { color: $brand-color-2; }
-.section-link:visited { color: black; }
 
 /**
  * Clearfix
@@ -95,23 +69,3 @@ a.no-line {
     clear: both;
   }
 }
-
-.clear:before,
-.clear:after {
-    content: " ";
-    display: table;
-}
-
-.clear:after {
-    clear: both;
-}
-
-// Misc classes for spacing
-
-.martop2 { margin-top: 2em; }
-// .pad2 { margin-top: 2em; 
-//     @include palm { margin-top: 4em; }
-// }
-.padbot3 { padding-bottom: 3em; }
-.center-pos { text-align: center; }
-.nobr { white-space: nowrap;}

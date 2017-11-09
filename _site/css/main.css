@@ -1,13 +1,263 @@
-@charset "utf-8";
+*, *:before, *:after {
+  box-sizing: border-box; }
 
-// Import partials from `sass_dir` (defaults to `_sass`)
+/**
+ * Reset some basic elements
+ */
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
+  margin: 0;
+  padding: 0; }
 
-@import
-	"base",
-	"helper/media_queries",
-	"helper/mixins",
-	"helper/variables",
-	"layout/footer",
-	"layout/header",
-	"layout/navigation"
-;
+/**
+ * Basic styling
+ */
+body {
+  font-family: "Karla", sans-serif;
+  font-weight: 400;
+  color: #070707;
+  -webkit-text-size-adjust: 100%; }
+
+/**
+ * Set `margin-bottom` to maintain vertical rhythm
+ */
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+ul, ol, dl, figure {
+  margin-bottom: 15px; }
+
+ul, li {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+/**
+ * Images
+ */
+img {
+  max-width: 100%;
+  vertical-align: middle; }
+
+/**
+ * Clearfix
+ */
+/* - Overlay Responsive Menu */
+#menu-container {
+  height: 50px;
+  position: relative;
+  width: 100px; }
+  @media screen and (min-width: 500px) {
+    #menu-container {
+      width: 50px; } }
+
+.menuButton {
+  background: transparent !important;
+  border: none !important;
+  height: 100% !important;
+  position: relative !important;
+  text-align: right;
+  width: 100% !important;
+  -webkit-font-smoothing: antialiased;
+  width: 50px; }
+
+.menuButton:active {
+  position: relative;
+  top: 1px; }
+
+.menuButton:hover {
+  -o-transition: .75s;
+  -ms-transition: .75s;
+  -moz-transition: .75s;
+  -webkit-transition: .75s;
+  transition: .75s; }
+
+.overlay {
+  background-color: rgba(230, 79, 76, 0.97);
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 500; }
+
+.overlay nav {
+  position: relative; }
+
+.overlay ul {
+  display: inline-block;
+  list-style: none;
+  margin-left: 20px;
+  padding: 0;
+  position: relative; }
+  @media screen and (min-width: 750px) {
+    .overlay ul {
+      margin-left: 50px; } }
+
+.overlay ul li {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  padding-bottom: 20px; }
+
+.overlay ul li a {
+  color: #fff;
+  font-size: 38px;
+  line-height: 44px;
+  font-weight: bold;
+  text-decoration: none; }
+  @media screen and (min-width: 400px) {
+    .overlay ul li a {
+      font-size: 48px;
+      line-height: 54px; } }
+  @media screen and (min-width: 500px) {
+    .overlay ul li a {
+      font-size: 60px;
+      line-height: 60px; } }
+  @media screen and (min-width: 750px) {
+    .overlay ul li a {
+      font-size: 70px;
+      line-height: 70px; } }
+  @media screen and (min-width: 1024px) {
+    .overlay ul li a {
+      font-size: 90px;
+      line-height: 80px; } }
+
+.overlay ul li a:hover {
+  color: black; }
+
+.overlay-close {
+  background: url("/assets/img/icon_menu_close.svg") no-repeat center center !important;
+  background-size: contain !important;
+  border: none !important;
+  color: transparent !important;
+  height: 35px !important;
+  outline: none;
+  overflow: hidden !important;
+  position: absolute !important;
+  right: 35px !important;
+  text-indent: 200% !important;
+  top: 10px !important;
+  width: 25px !important;
+  z-index: 100 !important; }
+  @media screen and (min-width: 750px) {
+    .overlay-close {
+      right: 57px !important; } }
+
+.overlay-data {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0s 0.5s;
+  -webkit-transition: opacity 0.5s, visibility 0s 0.5s; }
+
+.overlay-open {
+  opacity: 1;
+  transition: opacity 0.5s;
+  -webkit-transition: opacity 0.5s;
+  visibility: visible; }
+
+.menu-content {
+  bottom: 40px;
+  font-size: 19px;
+  font-weight: bold;
+  opacity: 0.7;
+  position: fixed;
+  width: 88% !important; }
+  @media screen and (min-width: 750px) {
+    .menu-content {
+      width: 40% !important; } }
+  @media screen and (min-width: 1024px) {
+    .menu-content {
+      width: 30% !important; } }
+
+.site_header .logo_img {
+  width: 50px; }
+.site_header .menu_img {
+  width: 50px; }
+
+.outer_wrapper {
+  margin: 15px; }
+
+.flex-centered {
+  height: 100%;
+  justify-content: flex-start !important;
+  align-items: center; }
+
+.white_wrap {
+  white-space: nowrap; }
+
+.masthead {
+  margin: 75px auto; }
+
+.intro_content {
+  margin-bottom: 55px;
+  padding: 12px; }
+  .intro_content .intro_title {
+    font-family: "Muli", sans-serif;
+    font-size: 26px;
+    font-weight: 900;
+    letter-spacing: 1.42px;
+    line-height: 34px;
+    margin-bottom: 30px; }
+  .intro_content .intro_text {
+    font-size: 18px;
+    letter-spacing: 1.2px;
+    line-height: 28px;
+    margin-bottom: 30px; }
+
+.highlight_content {
+  border: 9px solid #47E7CE;
+  padding: 12px;
+  margin-bottom: 150px; }
+  .highlight_content .highlight_title {
+    font-family: "Muli", sans-serif;
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 30px;
+    margin-bottom: 25px;
+    text-transform: uppercase; }
+  .highlight_content .highlight_img {
+    margin-bottom: 40px; }
+    .highlight_content .highlight_img img {
+      width: 75px; }
+  .highlight_content .highlight_short .highlight_short_title {
+    font-family: "Muli", sans-serif;
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 25px;
+    margin-bottom: 15px;
+    text-transform: uppercase; }
+  .highlight_content .highlight_short .icon_copper {
+    margin-bottom: 30px; }
+    .highlight_content .highlight_short .icon_copper .icon_copper_text {
+      display: inline-block;
+      width: 80%; }
+    .highlight_content .highlight_short .icon_copper .icon_copper_title {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      text-transform: uppercase; }
+    .highlight_content .highlight_short .icon_copper .icon_copper_img {
+      float: left;
+      padding-right: 10px; }
+
+.bronzey {
+  background-image: url("/assets/img/gwcc_kids.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 40vh;
+  left: 50%;
+  margin-left: -50vw;
+  position: relative;
+  width: 100vw; }
+  .bronzey .bronzey_alpha {
+    color: #f7f7f7;
+    font-family: "Muli", sans-serif;
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: 0.33px;
+    margin-bottom: 35px;
+    text-transform: uppercase; }
+  .bronzey .bronzey_play {
+    text-align: center; }
