@@ -1,8 +1,242 @@
+body.noScroll { /* ...or body.dialogShowing */
+	overflow: hidden;
+}
+
+// Wrapper
+.fullwidth_inner_wrapper {
+	padding: 25px;
+
+	@include palm {
+		padding: 50px;
+	}
+	@include laptop {
+		padding: 75px;
+	}
+	@include desktop {
+		max-width: 1200px;
+	}
+	@include widescreen {
+		max-width: 1366px;
+	}
+}
+.inner_wrapper {
+	padding: 12px;
+
+	@include small {
+		margin: 0 auto;
+		max-width: 375px;
+	}
+	@include tablet {
+		max-width: 750px;
+	}
+	@include laptop {
+		max-width: 950px;
+	}
+	@include widescreen {
+		max-width: 1125px;
+	}
+}
+.outer_wrapper {
+	position: relative;
+    margin: 15px;
+
+	@include laptop {
+		margin: 50px;
+	}
+}
+.single_template_outer_wrapper {
+	position: relative;
+	padding: 15px;
+
+	@include desktop {
+		padding: 50px;
+	}
+}
+.news_wrapper {
+	@extend .inner_wrapper;
+	@include small {
+		max-width: none;
+		width: 100%;
+	}
+	@include tablet {
+		max-width: 750px;
+	}
+	@include laptop {
+		max-width: 950px;
+	}
+	@include widescreen {
+		max-width: 1125px;
+	}
+}
+
+// Flexbox
 .flex-centered {
 	height: 100%;
 	justify-content: flex-start !important;
 	align-items: center;
 }
+
+// CTAs
+.brand_cta {
+	border: 2px solid;
+	border-radius: 20px;
+	color: $black;
+	display: block;
+	font-weight: bold;
+	margin: auto;
+	padding: 5px 10px;
+	text-align: center;
+	text-decoration: none;
+	width: 130px;
+
+	&:hover {
+		@extend %hover;
+	}
+}
+
+// Gold Layout
+// -- Page Masthead
+.page_masthead {
+	@extend .site_footer;
+}
+// -- Page Header
+.page_header_content {
+	padding-top: 50px;
+	padding-bottom: 25px;
+}
+.page_title_content {
+	margin: 0 auto 50px;
+	width: 100%;
+
+	@include palm {
+		margin: 0 0 75px;
+	}
+	@include desktop {
+		margin: 0 0 100px;
+	}
+
+
+	.circle {
+		// background: $yellow;
+		border-radius: 50%;
+		display: inline-block;
+		height: 75px;
+		width: 75px;
+
+		@include widescreen {
+			height: 100px;
+			width: 100px;
+		}
+	}
+	.page_title {
+		display: inline-block;
+		font-family: $font-1;
+		font-size: 40px;
+		font-weight: $muli-black;
+		margin-left: -45px;
+		margin-top: 15px;
+		text-transform: uppercase;
+		vertical-align: top;
+
+		@include widescreen {
+			font-size: 50px;
+			margin-top: 20px;
+		}
+	}
+}
+.page_subhead {
+	font-size: 20px;
+	line-height: 30px;
+	padding-bottom: 125px;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	text-align: center;
+
+	@include palm {
+		margin-bottom: 100px;
+		text-align: left;
+	}
+	@include tablet {
+		width: 75%;
+	}
+	@include laptop {
+		float: left;
+		margin-top: 0;
+		max-width: 600px;
+		width: 70%;
+	}
+	@include desktop {
+		font-size: 24px;
+		line-height: 34px;
+		max-width: 700px;
+	}
+
+	.page_subhead_title {
+		font-family: $font-1;
+		font-size: 28px;
+		font-weight: $muli-black;
+		margin-bottom: 25px;
+		text-transform: uppercase;
+
+		@include desktop {
+			font-size: 32px;
+		}
+	}
+}
+.page_subhead_content {
+	@extend %clearfix;
+}
+// -- Side Menu
+.side_menu {
+	border-top: 1px solid $yellow;
+	margin: 0 auto 75px;
+	padding-top: 30px;
+	text-align: center;
+	width: 45%;
+
+	@include palm {
+		margin: 0 0 70px;
+		text-align: left;
+		width: 35%;
+	}
+	@include tablet {
+		max-width: 150px;
+	}
+	@include laptop {
+		float: left;
+		margin-right: 100px;
+	}
+	@include widescreen {
+		margin-right: 200px;
+	}
+
+	ul li {
+		font-family: $font-1;
+		font-size: 18px;
+		font-weight: $muli-black;
+		line-height: 23px;
+		margin-bottom: 20px;
+		text-transform: uppercase;
+
+		a {
+			color: $black;
+			text-decoration: none;
+
+			&:hover {
+				@extend %hover;
+			}
+		}
+	}
+}
+
+
+// Spacers + Misc
 .white_wrap {
 	white-space: nowrap;
+}
+.line_through {
+	&:hover {
+		text-decoration: line-through;
+		cursor: default;
+	}
 }

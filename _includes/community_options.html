@@ -1,0 +1,29 @@
+<div class="community_options_content inner_wrapper">
+    <div class="section_icon"><img src="/assets/img/section_icon.png" /></div>
+    <div class="options_wrapper">
+        <div class="options_title">
+            Bringing the Community Options
+        </div>
+        <div class="options_text">
+            Retro occupy organic, stumptown shabby chic pour-over roof party DIY normcore. Actually artisan organic occupy.  Retro occupy organic, stumptown shabby chic pour-over roof party DIY normcore. Actually artisan organic occupy.
+        </div>
+    </div>
+    <div class="options_2col">
+        <div class="frow justify-between">
+            {% for item in site.data.community_options %}
+            <div class="options_item">
+                <div class="options_img">
+                    <img src="{{ item.icon }}" />
+                </div>
+                <div class="options_headline">
+                    {{ item.headline }}
+                </div>
+                <div class="options_subhead">
+                    {{ item.subhead }}
+                </div>
+                {% include brand_cta.html title="Learn More" url="/contact/" %}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

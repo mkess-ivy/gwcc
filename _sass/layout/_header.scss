@@ -30,7 +30,7 @@
     transition:.75s;
 }
 .overlay {
-	background-color: rgba(230,79,76,0.97);
+	background-color: #ffffff;
 	height: 100%;
 	left: 0;
 	position: fixed;
@@ -51,31 +51,31 @@
 	@include tablet {
 		margin-left: 50px;
 	}
+	@include desktop {
+		margin-left: 100px;
+	}
 }
 .overlay ul li {
-	margin:0;
-	padding: 0;
-	width: 100%;
-	padding-bottom: 20px;
-}
-.overlay ul li a {
-	color: #fff;
-	font-size: 38px;
-	line-height: 44px;
+	font-size: 40px;
 	font-weight: bold;
-	text-decoration: none;
+	line-height: 50px;
+	margin:0;
+	margin-bottom: 25px;
+	padding: 0;
+	text-transform: uppercase;
+	width: 100%;
 
 	@include small {
 		font-size: 48px;
-		line-height: 54px;
+		// line-height: 54px;
 	}
 
-	@include palm {
+	@include tablet {
 		font-size: 60px;
 		line-height: 60px;
 	}
 
-	@include tablet {
+	@include laptop {
 		font-size: 70px;
 		line-height: 70px;
 	}
@@ -85,26 +85,35 @@
 		line-height: 80px;
 	}
 }
+.overlay ul li a {
+	color: $black;;
+	text-decoration: none;
+}
 .overlay ul li a:hover {
-	color: black;
+	color: $grey !important;
+	@extend %hover;
 }
 .overlay-close {
-	background: url('/assets/img/icon_menu_close.svg') no-repeat center center !important;
+	background: url('/assets/img/icon_menu_close_v2.png') no-repeat center center !important;
 	background-size: contain !important;
 	border: none !important;
 	color: transparent !important;
+	float: right;
 	height: 35px !important;
 	outline: none;
 	overflow: hidden !important;
-	position: absolute !important;
-	right: 35px !important;
+	// position: absolute !important;
+	// right: 7px !important;
+	margin-right: 7px !important;
 	text-indent: 200% !important;
-	top: 10px !important;
-	width: 25px !important;
+	top: 7px !important;
+	margin-top: 7px !important;
+	width: 35px !important;
 	z-index: 100 !important;
 
-	@include tablet {
-		right: 57px !important;
+	@include laptop {
+		// right: 23px !important;
+		// top: 21px !important;
 	}
 }
 .overlay-data {
@@ -136,14 +145,16 @@
 	}
 }
 
+// Header
 .site_header {
     .logo_img {
         width: 50px;
     }
     .menu_img {
-        width: 50px;
+        width: 35px;
     }
 }
-.outer_wrapper {
-    margin: 15px;
+.logo {
+	position: relative;
+	z-index: 600;
 }

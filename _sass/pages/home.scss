@@ -1,12 +1,35 @@
 // Masthead
 .masthead {
     margin: 75px auto;
+
+    @include tablet {
+        margin-bottom: 125px;
+        max-width: 750px;
+    }
+    @include laptop {
+        height: 50vh;
+        max-width: 900px;
+    }
+    @include widescreen {
+        max-width: 1125px;
+    }
+
 }
 
 // Intro Content
 .intro_content {
     margin-bottom: 55px;
-    padding: 12px;
+
+    .intro_item {
+        margin-bottom: 50px;
+
+        @include tablet {
+            margin-bottom: 0;
+            margin-top: 75px;
+            width: 45%;
+        }
+
+    }
 
     .intro_title {
         font-family: $font-1;
@@ -28,8 +51,14 @@
 // Highlight Content
 .highlight_content {
     border: 9px solid $bluegreen;
-    padding: 12px;
     margin-bottom: 150px;
+
+    @include tablet {
+        width: 40%;
+    }
+    @include widescreen {
+        max-width: 300px;
+    }
 
     .highlight_title {
         font-family: $font-1;
@@ -46,58 +75,31 @@
             width: 75px;
         }
     }
-    .highlight_short {
-        .highlight_short_title {
-            font-family: $font-1;
-            font-size: 20px;
-            font-weight: $muli-black;
-            line-height: 25px;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-        }
-        .icon_copper {
-            margin-bottom: 30px;
-
-            .icon_copper_text {
-                display: inline-block;
-                width: 80%;
-            }
-            .icon_copper_title {
-                // font-family: $font-2;
-                font-size: 16px;
-                font-weight: $font-bold;
-                margin-bottom: 8px;
-                text-transform: uppercase;
-            }
-            .icon_copper_img {
-                float: left;
-                padding-right: 10px;
-            }
-        }
-    }
 }
 
-.bronzey {
-    background-image: url('/assets/img/gwcc_kids.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    height: 40vh;
-    left: 50%;
-    margin-left: -50vw;
-    position: relative;
-    width: 100vw;
+// Sponsors
+.sponsor_content {
+    margin-bottom: 150px;
 
-    .bronzey_alpha {
-        color: $white;
+    .sponsor_title {
         font-family: $font-1;
-        font-size: 20px;
+        font-size: 24px;
         font-weight: $muli-black;
-        letter-spacing: 0.33px;
-        margin-bottom: 35px;
+        margin: 30px 0 75px;
+        text-align: center;
         text-transform: uppercase;
     }
-    .bronzey_play {
+    .sponsor_item {
+        margin-bottom: 30px;
         text-align: center;
+        width: 100%;
+
+        @include tablet {
+            width: 22%;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
 }

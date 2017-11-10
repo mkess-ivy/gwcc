@@ -14,6 +14,11 @@ $(document).ready(function(){
         });
     });
 
+    // site preloader
+    $(window).load(function(){
+	    $('.se-pre-con').fadeOut('slow',function(){$(this).remove();});
+	});
+
     // Main Overlay Menu Functionality
     $("#overlay-menu").click(function() {
         $(".overlay").addClass("overlay-open");
@@ -23,6 +28,19 @@ $(document).ready(function(){
 	$(".overlay-close").click(function() {
         $(".overlay").removeClass("overlay-open");
         $('body').removeClass("noScroll");
+    });
+
+    // News Slider
+    $('#js_news_slider').slick({
+        arrows: true,
+        autoplay: false,
+        cssEase: 'linear',
+        dots: false,
+        fade: true,
+        infinite: false,
+        prevArrow: '<img src="/assets/img/left_caret.png" class="prevArrow" />',
+        nextArrow: '<img src="/assets/img/right_caret.png" class="nextArrow" />',
+        speed: 500
     });
 
 }); // Close of jQuery

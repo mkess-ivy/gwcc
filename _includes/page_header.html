@@ -1,0 +1,24 @@
+<div class="page_header_content inner_wrapper">
+    <div class="page_title_content">
+        <div class="circle" style="background: {{ page.circle }}"></div>
+        <div class="page_title">{{ page.title }}</div>
+    </div>
+    <div class="page_subhead_content">
+        {% if page.title == "Discover" %}
+        <div class="side_menu">
+            <ul>
+                <li><a href="#" class="line_through">History</a></li>
+                <li><a href="#" class="line_through">Partners</a></li>
+                <li><a href="#" class="line_through">Sponsors</a></li>
+                <li><a href="#" class="line_through">Staff</a></li>
+            </ul>
+        </div>
+        {% endif %}
+        {% if page.subhead %}
+        <div class="page_subhead">
+            <div class="page_subhead_title">{{ page.subhead }}</div>
+            {{ page.subtext }}
+        </div>
+        {% endif %}
+    </div>
+</div>

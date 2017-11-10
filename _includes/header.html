@@ -1,4 +1,4 @@
-<header class="site_header outer_wrapper">
+<header class="site_header {% unless page.layout == "gold" %}outer_wrapper{% endunless %} {% if page.layout == "gold" %} single_template_outer_wrapper {% endif %}">
 
     <div class="frow justify-between">
         <div class="logo">
@@ -6,22 +6,24 @@
         </div>
 
         <div class="menu">
-            <div id="menu-container" class="menu-btn"><button id="overlay-menu" type="button" class="menuButton"><img src="/assets/img/icon_menu.png" class="menu_img" /></button></div>
+            <div id="menu-container" class="menu-btn"><button id="overlay-menu" type="button" class="menuButton"><img src="/assets/img/icon_menu_v2.png" class="menu_img" /></button></div>
 
             <div class="site_header_wrapper">
                 <div class="overlay overlay-data noScroll">
-                    <button type="button" class="overlay-close"></button>
-                        <div class="frow flex-centered">
-                            <nav>
-                                <ul>
-                                    <li><a href="/work">work</a></li>
-                                    <li><a href="/about">about</a></li>
-                                    <li><a href="{{ site.baseurl }}/our-team">our team</a></li>
-                                    <li><a href="http://www.google.com">greenmount west</a></li>
-                                    <li><a href="mailto:info@noisytenants.com">contact</a></li>
-                                </ul>
-                            </nav>
-                        </div>
+                    <div class="single_template_outer_wrapper">
+                        <button type="button" class="overlay-close"></button>
+                    </div>
+                    <div class="frow flex-centered">
+                        <nav>
+                            <ul>
+                                <li><a href="{{ site.baseurl }}/discover">discover</a></li>
+                                <li><a href="{{ site.baseurl }}/programs">programs</a></li>
+                                <li><a href="#" class="line_through">community</a></li>
+                                <li><a href="#" class="line_through">highlights</a></li>
+                                <li><a href="http://www.noisytenants.com/work/bus-stop-buddies" target="_blank">bus stop buddies</a></li>
+                                <li><a href="{{ site.baseurl }}/contact">contact</a></li>
+                            </ul>
+                        </nav>
                     </div>
                 </div>
             </div>

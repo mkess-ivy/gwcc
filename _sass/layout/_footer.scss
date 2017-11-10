@@ -1,0 +1,104 @@
+.site_footer {
+    background-image: url('/assets/img/bg_dots.jpg');
+    background-repeat: no-repeat;
+    background-position: 2% 7%;
+    background-size: cover;
+}
+.medium_footer {
+    margin-bottom: 125px;
+    @include palm {
+        width: 450px;
+        margin: 0 auto 125px;
+    }
+
+    @include laptop {
+        margin-bottom: 30px;
+        padding-bottom: 0 !important;
+        width: 100%;
+    }
+
+    .medium_title {
+        font-family: $font-1;
+        font-size: 22px;
+        font-weight: $muli-black;
+        letter-spacing: 1.47px;
+        line-height: 1;
+        margin: 75px 0 25px;
+
+        @include laptop {
+            font-size: 30px;
+            line-height: 1.2;
+            margin: 0 0 45px;
+        }
+    }
+
+    .medium_item {
+        @include laptop {
+            width: 47%;
+            max-width: 350px;
+        }
+
+    }
+
+    .social {
+        width: 80%;
+
+        .social_icon {
+            margin-right: 20px;
+            display: inline;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            a i {
+                color: $black;
+
+                &:hover {
+                    @extend %hover;
+                }
+            }
+        }
+    }
+}
+.short_footer {
+    padding-bottom: 20px;
+
+    .short_item {
+        font-family: $font-1;
+        font-size: 14px;
+        font-weight: $font-bold;
+        margin-bottom: 15px;
+        text-align: center;
+        width: 100%;
+
+        ul li {
+            display: inline;
+            padding-right: 10px;
+
+
+            a {
+                color: $black;
+                text-decoration: none;
+                // font-size: 17px;
+
+                &:hover {
+                    @extend %hover;
+                }
+            }
+
+            &::after {
+                content: '|';
+                display: inline-block;
+                padding-left: 10px;
+                width: 2px;
+            }
+            &:last-child::after {
+                content: none;
+            }
+            &:last-child {
+
+            }
+        }
+    }
+}

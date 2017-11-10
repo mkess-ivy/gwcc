@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+    {% include head.html %}
+
+    <body>
+        <!-- Preloader -->
+  	    <div class="se-pre-con"></div>
+
+        <div class="se-pre-con"></div>
+        <div class="page_masthead">
+            {% include header.html %}
+            {% include page_header.html %}
+        </div>
+
+        {% unless page.title == "Programs" or page.title == "Contact" %}
+        <div class="outer_wrapper">
+        {% endunless %}
+            {{ content }}
+        {% unless page.title == "Programs" or page.title == "Contact" %}
+        </div>
+        {% endunless %}
+
+        {% include footer.html %}
+
+
+  </body>
+
+</html>
