@@ -54,6 +54,9 @@ img {
   .page_subhead_content:after {
     clear: both; }
 
+.backtop {
+  margin: 10px auto; }
+
 .community_options_content .section_icon {
   margin: 0 auto 50px;
   text-align: center; }
@@ -188,6 +191,7 @@ img {
   left: 50%;
   margin-left: -50vw;
   position: relative;
+  transition: 0.5s;
   width: 100vw; }
   @media screen and (min-width: 768px) {
     .bronzey {
@@ -407,6 +411,96 @@ img {
   .contact_content .contact_highlight {
     font-weight: 700; }
 
+/* Fullscreen Section */
+.gwcc_video_player {
+  width: 100%;
+  height: 10vh;
+  color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-display: flex;
+  -webkit-align-items: center;
+  -webkit-justify-content: center; }
+
+.gwcc_play {
+  width: 70px;
+  height: 70px;
+  border: 3px solid;
+  display: block;
+  margin: 0 auto;
+  /* Important for :after */
+  position: relative;
+  /* Makes a circle */
+  border-radius: 50%; }
+
+.gwcc_play:hover {
+  background: #333;
+  cursor: pointer; }
+
+.gwcc_play:after {
+  position: absolute;
+  content: "";
+  /* Centering */
+  top: 50%;
+  margin-top: -15px;
+  left: 50%;
+  margin-left: -8px;
+  /* CSS Triangle */
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 15px 0 15px 20px;
+  border-color: transparent transparent transparent #ffffff; }
+
+/* Fullscreen Overlay */
+.gwcc_video_overlay {
+  width: 100%;
+  height: 100vh;
+  /* 50% opacity black */
+  background: rgba(71, 231, 206, 0.95);
+  /* Stays locked on scroll */
+  position: fixed;
+  /* On top of the rest*/
+  z-index: 2;
+  /* Hidden */
+  opacity: 0;
+  /* No interference */
+  left: -100%;
+  top: 0;
+  /* CSS3 Transition */
+  transition: opacity .5s;
+  -webkit-transition: opacity .5s; }
+
+/* 90% width container */
+.gwcc-video-container {
+  width: 90%;
+  /*width: 100%;*/
+  /* Centering */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%); }
+
+.gwcc_close {
+  width: 20px;
+  fill: red;
+  position: absolute;
+  right: 0;
+  /* Bring above video */
+  top: -30px; }
+
+.gwcc_close:hover {
+  /* 50% opacity white */
+  fill: rgba(0, 0, 0, 0.5);
+  cursor: pointer; }
+
+/* Class to fade in overlay */
+.gwcc_show {
+  opacity: 1; }
+
 .news_slider .news_slide_box .news_slide_box_text a:hover, .news_slider .news_slide_box .news_slide_box_link a:hover, .contact_content .contact_text a:hover, .medium_footer .social .social_icon a i:hover, .short_footer .short_item ul li a:hover, .overlay ul li a:hover, .brand_cta:hover, .side_menu ul li a:hover {
   color: #c4385f;
   transition: 0.5s; }
@@ -533,17 +627,19 @@ img {
       margin-left: 100px; } }
 
 .overlay ul li {
-  font-size: 40px;
+  font-size: 26px;
   font-weight: bold;
-  line-height: 50px;
+  line-height: 36px;
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 10px;
   padding: 0;
   text-transform: uppercase;
   width: 100%; }
   @media screen and (min-width: 400px) {
     .overlay ul li {
-      font-size: 48px; } }
+      font-size: 40px;
+      line-height: 50px;
+      margin-bottom: 25px; } }
   @media screen and (min-width: 768px) {
     .overlay ul li {
       font-size: 60px;
@@ -680,8 +776,20 @@ body.noScroll {
 
 .flex-centered {
   height: 100%;
+  -webkit-justify-content: flex-start !important;
+  -moz-justify-content: flex-start !important;
+  -ms-justify-content: flex-start !important;
   justify-content: flex-start !important;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
   align-items: center; }
+
+.ios_flex {
+  margin-top: 150px; }
+  @media screen and (min-width: 992px) {
+    .ios_flex {
+      margin: 0; } }
 
 .brand_cta {
   border: 2px solid;

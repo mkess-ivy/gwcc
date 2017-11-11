@@ -1,0 +1,23 @@
+<div class="featured_content inner_wrapper">
+    <div class="frow justify-between">
+        {% for item in site.data.featured_content %}
+        <div class="featured_item">
+            <div class="double_image">
+                <div class="double_bottom"></div>
+                <div class="double_top">
+                    <img src="{{ item.image }}"  />
+                </div>
+            </div>
+            <div class="featured_title">
+                {{ item.title }}
+            </div>
+            <div class="featured_text">
+                {{ item.text }}
+            </div>
+            <a href="/contact" class="brand_cta">
+                <div>Learn More</div>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</div>

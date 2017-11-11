@@ -68,65 +68,9 @@ layout: primary
         </div>
     </div>
 
-    <div class="bronzey">
-        <div class="frow centered">
-            <div>
-                <div class="bronzey_alpha">
-                    Learn about Gwcc
-                </div>
-                <div class="bronzey_play">
-                    <img src="/assets/img/icon_play.svg" />
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="featured_content inner_wrapper">
-        <div class="frow justify-between">
-            <div class="featured_item">
-                <div class="double_image">
-                    <div class="double_bottom"></div>
-                    <div class="double_top">
-                        <img src="/assets/img/discover_gwcc_img1.jpg"  />
-                    </div>
-                </div>
-                <div class="featured_title">
-                    Discover GWCC Free + Open to Public
-                </div>
-                <div class="featured_text">
-                    Kogi Cosby sweater ethical squid irony disrupt, organic tote bag gluten-free XOXO wolf typewriter mixtape small batch
-                </div>
-                <a href="#" class="brand_cta">
-                    <div>Learn More</div>
-                </a>
-            </div>
-            <div class="featured_item">
-                <div class="double_image">
-                    <div class="double_bottom"></div>
-                    <div class="double_top">
-                        <img src="/assets/img/employing_youth_img1.jpg"  />
-                    </div>
-                </div>
-                <div class="featured_title">
-                    Employing Youth Workers Ages 14 +
-                </div>
-                <div class="featured_text">
-                    Kogi Cosby sweater ethical squid irony disrupt, organic tote bag gluten-free XOXO wolf typewriter mixtape small batch
-                </div>
-                <a href="#" class="brand_cta">
-                    <div>Learn More</div>
-                </a>
-            </div>
-        </div>
-    </div>
-    <div class="sponsor_content inner_wrapper">
-        <hr />
-        <div class="sponsor_title">Sponsers</div>
-        <div class="sponsor_group">
-            <div class="frow row-between">
-                <div class="sponsor_item"><img src="/assets/img/sponsor_robert_deutsch.png"  /></div>
-                <div class="sponsor_item"><img src="/assets/img/sponsor_gwca.png"  /></div>
-                <div class="sponsor_item"><img src="/assets/img/sponsor_baltimore_museum_of_art.png"  /></div>
-            </div>
-        </div>
-    </div>
+    {% include bronzey.html %}
+
+    {% include featured_content.html %}
+
+    {% include sponsors.html %}
 </div>

@@ -59,17 +59,29 @@
             </div>
             <div class="short_item">
                 <ul>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#" class="line_through">Privacy Policy</a></li>
+                    <li><a href="#" class="line_through">FAQs</a></li>
                 </ul>
+            </div>
+            <div class="backtop">
+                <a href="#home"><img src="/assets/img/backtop.png" /></a>
             </div>
         </div>
     </div>
 </footer>
 
 <!-- Javascript CDN -->
+{% unless page.layout == "primary" %}
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+{% endunless %}
 <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+<!-- GWCC Video player -->
+<!-- {% if page.layout == "primary" %} -->
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<!-- {% endif %} -->
+{% if page.layout == "primary" %}
+{% include gwcc_video.js %}
+{% endif %}
 <!-- Font Awesome -->
 <script type="text/javascript" src="https://use.fontawesome.com/d476a27cae.js"></script>
 <!-- Slow Reveal -->

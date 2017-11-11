@@ -1,0 +1,100 @@
+/* Fullscreen Section */
+.gwcc_video_player {
+    width: 100%;
+    height: 10vh;
+    color: white;
+    // background: #2980b9;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-display: flex;
+    -webkit-align-items: center;
+    -webkit-justify-content: center;
+}
+
+.gwcc_play {
+    width: 70px;
+    height: 70px;
+    // background: #222;
+    border: 3px solid;
+    display: block;
+    margin: 0 auto;
+    /* Important for :after */
+    position: relative;
+    /* Makes a circle */
+    border-radius: 50%;
+}
+
+.gwcc_play:hover {
+    background: #333;
+    cursor: pointer;
+}
+
+.gwcc_play:after {
+    position: absolute;
+    content: "";
+    /* Centering */
+    top: 50%;
+    margin-top: -15px;
+    left: 50%;
+    margin-left:  -8px;
+    /* CSS Triangle */
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 15px 0 15px 20px;
+    border-color: transparent transparent transparent #ffffff;
+}
+
+/* Fullscreen Overlay */
+.gwcc_video_overlay {
+    width: 100%;
+    height: 100vh;
+    /* 50% opacity black */
+    background: rgba(71,231,206,0.95);
+    /* Stays locked on scroll */
+    position: fixed;
+    /* On top of the rest*/
+    z-index: 2;
+    /* Hidden */
+    opacity: 0;
+    /* No interference */
+    left: -100%;
+    top: 0;
+    /* CSS3 Transition */
+    transition: opacity .5s;
+    -webkit-transition: opacity .5s;
+}
+
+/* 90% width container */
+.gwcc-video-container {
+    width: 90%;
+    /*width: 100%;*/
+    /* Centering */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
+.gwcc_close {
+    width: 20px;
+    fill: red;
+    position: absolute;
+    right: 0;
+    /* Bring above video */
+    top: -30px;
+}
+
+.gwcc_close:hover {
+    /* 50% opacity white */
+    fill: rgba(0,0,0,0.5);
+    cursor: pointer;
+}
+
+/* Class to fade in overlay */
+.gwcc_show {
+    opacity: 1;
+}

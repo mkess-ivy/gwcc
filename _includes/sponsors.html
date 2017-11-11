@@ -1,0 +1,11 @@
+<div class="sponsor_content inner_wrapper">
+    <hr />
+    <div class="sponsor_title">Sponsors</div>
+    <div class="sponsor_group">
+        <div class="frow row-between">
+            {% for item in site.data.sponsors %}
+            <div class="sponsor_item"><img src="{{ item.image }}"  /></div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

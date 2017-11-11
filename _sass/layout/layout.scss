@@ -72,8 +72,21 @@ body.noScroll { /* ...or body.dialogShowing */
 // Flexbox
 .flex-centered {
 	height: 100%;
+	-webkit-justify-content: flex-start !important;
+	-moz-justify-content: flex-start !important;
+	-ms-justify-content: flex-start !important;
 	justify-content: flex-start !important;
+	-webkit-align-items: center;
+	-moz-align-items: center;
+	-ms-align-items: center;
 	align-items: center;
+}
+.ios_flex {
+	margin-top: 150px;
+
+	@include laptop {
+		margin: 0;
+	}
 }
 
 // CTAs

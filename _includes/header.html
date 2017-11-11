@@ -1,8 +1,8 @@
 <header class="site_header {% unless page.layout == "gold" %}outer_wrapper{% endunless %} {% if page.layout == "gold" %} single_template_outer_wrapper {% endif %}">
 
     <div class="frow justify-between">
-        <div class="logo">
-            <a href="/"><img src="/assets/img/gwcc-logo.svg" class="logo_img" /></a>
+        <div class="logo" id="home">
+            <a href="/"><img src="/assets/img/gwcc-logo.png" class="logo_img" /></a>
         </div>
 
         <div class="menu">
@@ -13,7 +13,7 @@
                     <div class="single_template_outer_wrapper">
                         <button type="button" class="overlay-close"></button>
                     </div>
-                    <div class="frow flex-centered">
+                    <div class="frow flex-centered ios_flex">
                         <nav>
                             <ul>
                                 <li><a href="{{ site.baseurl }}/discover">discover</a></li>
