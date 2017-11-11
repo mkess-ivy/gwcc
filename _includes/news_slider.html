@@ -2,7 +2,7 @@
     <div class="news_slider" id="js_news_slider">
         {% for item in site.data.news_slider %}
         <div>
-            <div class="news_slide_item" style="background-image: url('/assets/img/learn_gwcc.jpg');">
+            <div class="news_slide_item" style="background-image: url('{{ item.heroimg }}');">
                 <div class="frow centered">
                     <div class="news_slide_herotext">
                         {{ item.herotext }}

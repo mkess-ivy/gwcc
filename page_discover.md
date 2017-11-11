@@ -6,7 +6,7 @@ permalink: /discover/
 [//]: # Page Header
 circle: "#CDB028"
 subhead: Our Mission
-subtext: Retro occupy organic, stumptown shabby chic pour-over roof party DIY normcore. Actually artisan organic occupy, Wes Anderson ugh whatever pour-over gastropub selvage.
+subtext: The citizens of Greenmount West seek to improve their standards of living, quality of living, quality of life, and economic status regardless of gender, creed, culture, or class.
 ---
 {% include news_slider.html %}
 

@@ -14,8 +14,8 @@
             <div class="featured_text">
                 {{ item.text }}
             </div>
-            <a href="/contact" class="brand_cta">
-                <div>Learn More</div>
+            <a href="{{ item.url }}" class="brand_cta">
+                <div>{{ item.urltext }}</div>
             </a>
         </div>
         {% endfor %}

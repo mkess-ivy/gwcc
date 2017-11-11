@@ -35,7 +35,7 @@
     .medium_item {
         @include laptop {
             width: 47%;
-            max-width: 350px;
+            max-width: 450px;
         }
 
     }
@@ -62,7 +62,7 @@
     }
 }
 .short_footer {
-    padding-bottom: 20px;
+    padding: 0 50px 20px;
 
     .short_item {
         font-family: $font-1;
@@ -71,6 +71,23 @@
         margin-bottom: 15px;
         text-align: center;
         width: 100%;
+
+        &:nth-child(2) {
+            @include tablet {
+                padding-right: 25px;
+                text-align: right;
+                width: 52%;
+            }
+            @include desktop {
+                width: 56%;
+            }
+        }
+        &:first-child {
+            @include tablet {
+                width: 40%;
+                text-align: left;
+            }
+        }
 
         ul li {
             display: inline;

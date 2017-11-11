@@ -150,6 +150,10 @@
 .site_header {
     .logo_img {
         width: 50px;
+
+		@include tablet {
+			width: 65px;
+		}
     }
     .menu_img {
         width: 35px;

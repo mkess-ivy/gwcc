@@ -41,7 +41,7 @@ body.noScroll { /* ...or body.dialogShowing */
     margin: 15px;
 
 	@include laptop {
-		margin: 50px;
+		margin: 35px;
 	}
 }
 .single_template_outer_wrapper {
@@ -49,7 +49,7 @@ body.noScroll { /* ...or body.dialogShowing */
 	padding: 15px;
 
 	@include desktop {
-		padding: 50px;
+		// padding: 50px;
 	}
 }
 .news_wrapper {
@@ -65,7 +65,7 @@ body.noScroll { /* ...or body.dialogShowing */
 		max-width: 950px;
 	}
 	@include widescreen {
-		max-width: 1125px;
+		max-width: 1250px;
 	}
 }
 
@@ -101,6 +101,12 @@ body.noScroll { /* ...or body.dialogShowing */
 	text-align: center;
 	text-decoration: none;
 	width: 130px;
+
+	@include tablet {
+		width: 160px;
+		padding: 7px 10px;
+		font-size: 18px;
+	}
 
 	&:hover {
 		@extend %hover;
@@ -251,5 +257,16 @@ body.noScroll { /* ...or body.dialogShowing */
 	&:hover {
 		text-decoration: line-through;
 		cursor: default;
+	}
+}
+
+// Links
+.volunteer_link {
+	font-weight: $font-bold;
+	text-decoration: none;
+	color: $black;
+
+	&:hover {
+		@extend %hover;
 	}
 }
